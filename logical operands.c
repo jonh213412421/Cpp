@@ -9,7 +9,8 @@ int main() {
 	// infinite loop
 	while (1) {
 		if (b == 10)
-			printf("b é uma constante com valor de %d", b);
+			//\a adiciona um alerta
+			printf("\ab é uma constante com valor de %d", b);
 		// check if constant is diferent
 		if (c != 10)
 			printf("c é uma constante com valor de %d", c);
