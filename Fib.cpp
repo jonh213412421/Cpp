@@ -1,6 +1,7 @@
-// install gmp in mingw64
+//install mingw64 for gmp lib
 #include <stdio.h>
 #include <stdlib.h>
+#include <iostream>
 #include <gmp.h>
 
 int main() {
@@ -15,7 +16,7 @@ int main() {
     // Loop to generate the next 100 numbers of the sequence
     for (int i = 1; i <= 100; i++) {
         // Print the current result (the i-th number of the sequence)
-        printf("Iteration %d: ", i);
+        printf("numero %d: ", i);
         mpz_out_str(stdout, 10, resultado); // Print resultado in base 10
         printf("\n");
 
@@ -30,7 +31,7 @@ int main() {
     mpz_clear(a);
     mpz_clear(b);
     mpz_clear(resultado);
-    std::cout << "Press Enter to exit...";
+    std::cout << "Pressione enter para sair...";
     std::cin.get(); // Wait for Enter key press
 
     return 0;
