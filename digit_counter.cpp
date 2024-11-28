@@ -1,4 +1,5 @@
 //install mingw64 for gmp lib
+//gets number as a string and then counts it
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
