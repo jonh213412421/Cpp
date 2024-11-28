@@ -6,6 +6,7 @@
 
 int main() {
     // Declare GMP integer variables
+    // double would work too!
     mpz_t a, b, resultado;
 
     // Initialize the variables
