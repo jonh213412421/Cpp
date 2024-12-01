@@ -12,7 +12,7 @@ int main() {
     bool cards_in_hand[NUM_NAIPE][NUM_NUMERO];
     int num_cards, naipe, numero, i;
     const char naipes[] = {'g', 'h', 'p', 'e'};
-    const char numeros[] = {'A', '2', '3', '4', '5', '6', '7', '8', '9', 't', 'J', 'Q', 'K'}; //10 is a problem... it is deals an t
+    const char numeros[] = {'A', '2', '3', '4', '5', '6', '7', '8', '9', 't', 'J', 'Q', 'K'}; //10 is a problem... it is dealt as an t
     // gets hand size
     printf("Whats the hand size? ");
     scanf("%d", &num_cards);
