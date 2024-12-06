@@ -111,6 +111,29 @@ int main() {
             push(sum + '0');
             sum = 0;
             }
+
+            //handles division (tem que testar)
+            if (entry == '/') {
+                sum = 1;
+                printf("top: %d\n", top);
+                while (top > 0) {
+                    pop();
+                    printf("%c\n", contents[top]);
+                    aux = contents[top] - '0';
+                    printf("aux: %d\n", aux);
+                    if (sum != 0) {
+                        sum = aux / sum;
+                    }
+                    else {
+                        printf("Erro! Divisão por 0");
+                        return 0;
+                    }
+                    printf("top after sum: %d\n", top);
+                    printf("sum at the end of the loop: %d\n", sum);
+                }
+            push(sum + '0');
+            sum = 0; 
+            }
         } else {
             push(entry);
         }
