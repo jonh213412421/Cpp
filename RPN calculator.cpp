@@ -114,6 +114,7 @@ int main() {
 
             //handles division (tem que testar)
             if (entry == '/') {
+                //float for division
                 float sum;
                 float aux;
                 sum = 1;
