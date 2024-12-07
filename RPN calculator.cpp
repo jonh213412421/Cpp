@@ -114,6 +114,8 @@ int main() {
 
             //handles division (tem que testar)
             if (entry == '/') {
+                float sum;
+                float aux;
                 sum = 1;
                 printf("top: %d\n", top);
                 while (top > 0) {
@@ -122,14 +124,14 @@ int main() {
                     aux = contents[top] - '0';
                     printf("aux: %d\n", aux);
                     if (sum != 0) {
-                        sum = aux / sum;
+                        sum = (float) aux / sum;
                     }
                     else {
                         printf("Erro! Divisão por 0");
                         return 0;
                     }
                     printf("top after sum: %d\n", top);
-                    printf("sum at the end of the loop: %d\n", sum);
+                    printf("sum at the end of the loop: %.2f\n", sum);
                 }
             push(sum + '0');
             sum = 0; 
