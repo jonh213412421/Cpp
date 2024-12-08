@@ -1,3 +1,5 @@
+//configuração para usar o shell desejado
+
 {
     "tasks": [
         {
