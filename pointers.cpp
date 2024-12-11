@@ -57,3 +57,30 @@ int main() {
     //first element in the second row
     printf("%d\n", (*p+1)[0][0]);
 }
+
+
+//install mingw64 for gmp lib
+//reverse message using pointers
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char text[1000];
+    char *pointer;
+    pointer = text;
+    printf("hi, type a message:\n");
+    scanf("%s", &text);
+    printf("%s\n", text);
+    printf("%s\n", pointer);
+    int lenght, i;
+    lenght = strlen(text);
+    printf("%d\n", lenght);
+    for(i = 0; i < lenght / 2; i++) {
+        char temp = *(text + i);  // Store the character at i
+        *(text + i) = *(text + lenght - i - 1);  // Copy the character from the end
+        *(text + lenght - i - 1) = temp;  // Place the stored character at the end
+        
+    }
+    printf("%s", pointer);
+}
