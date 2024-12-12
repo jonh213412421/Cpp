@@ -91,6 +91,7 @@ int main() {
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+
 int main() {
     char text[100];
     char palavra[10];
@@ -103,12 +104,22 @@ int main() {
     scanf("%s", &palavra);
     pointer_palavra = palavra;
     int len_palavra = strlen(palavra);
-    printf("%d", len_palavra);
-    for(int i = len_palavra - 1; i < 100; i += len_palavra) {
-        if (*(pointer_text + i) == *(pointer_palavra + i)) {
-            printf("%d\n", i);
-            printf("%s\n", *(pointer_text + i));
-            printf("%s\n", *(pointer_palavra + i));
+    int match = 0;
+    for (int j = 0; j < 100; j++) {
+        if (match == strlen(palavra)) {
+            printf("match em %d\n", j);
+            match = 0;
+            break;
+        }
+        if (*(pointer_text + j) == *(pointer_palavra + j)) {
+            char temp = *(pointer_text + j);
+            printf("%d\n", j);
+            printf("%c\n", temp);
+            printf("%c\n", *(pointer_palavra + j));
+            match++;
+        }
+        else {
+            match = 0;
         }
     }
 }
