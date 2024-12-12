@@ -84,3 +84,31 @@ int main() {
     }
     printf("%s", pointer);
 }
+
+
+//install mingw64 for gmp lib
+//simple word searcher
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char text[100];
+    char palavra[10];
+    char *pointer_text;
+    char *pointer_palavra;
+    printf("type a text:\n");
+    scanf("%s", &text);
+    pointer_text = text;
+    printf("type a word to be searched:\n");
+    scanf("%s", &palavra);
+    pointer_palavra = palavra;
+    int len_palavra = strlen(palavra);
+    printf("%d", len_palavra);
+    for(int i = len_palavra - 1; i < 100; i += len_palavra) {
+        if (*(pointer_text + i) == *(pointer_palavra + i)) {
+            printf("%d\n", i);
+            printf("%s\n", *(pointer_text + i));
+            printf("%s\n", *(pointer_palavra + i));
+        }
+    }
+}
