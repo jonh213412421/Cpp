@@ -107,19 +107,21 @@ int main() {
     int match = 0;
     for (int j = 0; j < 100; j++) {
         if (match == strlen(palavra)) {
-            printf("match em %d\n", j);
+            printf("match em %d\n", j - strlen(palavra) + 1);
             match = 0;
             break;
         }
-        if (*(pointer_text + j) == *(pointer_palavra + j)) {
+        if (*(pointer_text + j) == *pointer_palavra) {
             char temp = *(pointer_text + j);
             printf("%d\n", j);
             printf("%c\n", temp);
             printf("%c\n", *(pointer_palavra + j));
             match++;
+            pointer_palavra++;
         }
         else {
             match = 0;
+            pointer_palavra = palavra;
         }
     }
 }
