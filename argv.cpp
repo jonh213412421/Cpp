@@ -5,7 +5,12 @@
 #include <string.h>
 
 int main(int argc, char *argv[]) {
+    //without exe command
     for (int i = 1; i < argc; i++) {
-        printf("\n%s\n", argv[i]);
+        printf("%s\n", argv[i]);
+    }
+    //prints the exe command
+    for (int i = 0; i < argc; i++) {
+        printf("%s\n", argv[i]);
     }
 }
