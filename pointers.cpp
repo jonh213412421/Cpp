@@ -98,7 +98,7 @@ int main() {
     char *pointer_text;
     char *pointer_palavra;
     printf("type a text:\n");
-    scanf("%s", &text);
+    gets(text);
     pointer_text = text;
     printf("type a word to be searched:\n");
     scanf("%s", &palavra);
