@@ -109,7 +109,6 @@ int main() {
         if (match == strlen(palavra)) {
             printf("match em %d\n", j - strlen(palavra) + 1);
             match = 0;
-            break;
         }
         if (*(pointer_text + j) == *pointer_palavra) {
             char temp = *(pointer_text + j);
