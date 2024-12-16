@@ -1,0 +1,10 @@
+//install mingw64 for gmp lib
+//Returns largest word
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#define ADD(x, y) (x + y)
+
+int main(int argc, char *argv[]) {
+    printf("%d", ADD(2,5));
+}
